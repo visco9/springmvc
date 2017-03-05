@@ -1,11 +1,18 @@
 package com.visco9.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
 /**
  * Created by x on 2/17/2017.
  */
+@Entity
 public class Product implements DomainObject {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String description;
     private BigDecimal price;
